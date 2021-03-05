@@ -1,0 +1,4 @@
+numpy==1.19.4
+opencv-python==4.5.1.48
+matplotlib==3.3.4
+pathlib==1.0.1
