@@ -17,7 +17,7 @@ Using the skills you have learned up to now, do the following tasks:
 ## Peer-review instructions
 
 - Clone the whole repository to a chosen location on your computer by executing ```git clone https://github.com/askesvane/VisualAnalytics.git``` in the terminal.
-- Through the terminal, navigate to the folder for assignment 3 by ```cd assignment3_EdgeDetection```
+- Through the terminal, navigate to the folder for assignment 3 by executing ```cd VisualAnalytics/assignment3_EdgeDetection```
 - Set up the virtual environment by executing ```bash create_visual_venv.sh``` in the terminal. A virtual environment called 'edgedetection_environment' should now appear in the folder. The virtual environment automatically installs all required packages provided in the 'requirements.txt' file.
 - Activate the virtual environment by executing ```./source edgedetection_environment/bin/activate``` in the terminal. You should now see the virtual environment in parentheses at the commandline.
 - Run the python script 'edge_detection.py' by executing ```python edge_detection.py```.
