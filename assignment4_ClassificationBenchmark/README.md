@@ -20,7 +20,7 @@ __Setup__
 
 __Run the scripts__
 - There are two scripts to be executed - one using a logistic regression model and one using a neural network to classify.
-- First, run either the python script 'lr-mnist.py' or 'lr-mnist_classes.py'. They do exactly the same - the only difference is that I tried to work with classes in the second one. You have to specify the size of the test dataset as a numric value between 0 and 1. Additionally, you can specify the filename of the classification report to be saved (remember '.csv' at the end). Execute ```python [either 'lr-mnist.py' or 'lr-mnist_classes.py'] --test_size] --filename_out```.
+- First, run either the python script 'lr-mnist.py' or 'lr-mnist_classes.py'. They do exactly the same - the only difference is that I tried to work with classes in the second one. You have to specify the size of the test dataset as a numric value between 0 and 1. Additionally, you can specify the filename of the classification report to be saved (remember '.csv' at the end). Execute ```python [either 'lr-mnist.py' or 'lr-mnist_classes.py'] --test_size --filename_out```.
 - Second, run the python script 'nn-mnist.py'. You have to specify the size of the test dataset again. Additionally, you can specify up to three hidden layers (seperated by space e.g. '40 30 20'). The input layer has 64 and the output layer 10. These should not be specified in the commandline. Number of epochs as well as the output filename can also be specified. Execute ```python nn-mnist.py --test_size --layers --epochs --filename_out```.
 - The two classification reports can be found in the folder 'out'.
 
