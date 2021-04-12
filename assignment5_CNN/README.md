@@ -22,14 +22,11 @@ This repository has the following directory structure:
 
 | Column | Description|
 |--------|:-----------|
-```data```| Contains the data used in both the scripts and the notebooks.
 ```out``` | Contains the outputs from running the script.
 ```cnn_artists.py```| The script to be executed from the terminal.
-
-Furthermore it contains the files:
-- ```./create_lang_venv.sh``` -> A bash script which automatically generates a new virtual environment, and install all the packages contained within ```requirements.txt```
-- ```requirements.txt``` -> A list of packages along with the versions that are certain to work
-- ```README.md``` -> This very readme file
+```./create_lang_venv.sh``` | A bash script which automatically generates a new virtual environment, and install all the packages contained within 'requirements.txt'
+```requirements.txt``` | A list of packages along with the versions that are certain to work.
+```README.md``` | This very readme file
 
 
 ## Run the script
@@ -40,7 +37,8 @@ cd assignment5_CNN
 bash ./create_visual_venv.sh
 source ./CNN_env/bin/activate
 ```
-Run the script (You can specify the height and width of the resized images. In both cases the default is 30.
+
+Run the script (You can specify the height and width of the resized images. In both cases the default is 30. In order to run the script, you need to add a ```data``` folder containing all the images. This folder is too large to be pushed to github.
 ```bash
 python cnn_artists.py --resize_height 30 --resize_width 30 
 ```
