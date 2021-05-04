@@ -24,7 +24,7 @@ This repository has the following directory structure:
 |--------|:-----------|
 ```out``` | Contains the outputs from running the script.
 ```cnn_artists.py```| The script to be executed from the terminal.
-```./create_lang_venv.sh``` | A bash script which automatically generates a new virtual environment 'CNN_env', and install all the packages contained within 'requirements.txt'
+```create_lang_venv.sh``` | A bash script which automatically generates a new virtual environment 'CNN_env', and install all the packages contained within 'requirements.txt'
 ```requirements.txt``` | A list of packages along with the versions that are required.
 ```README.md``` | This readme file.
 
@@ -44,7 +44,7 @@ source ./CNN_env/bin/activate
 ### Get the data
 The data occupies approximately 2GB and thus exceeds Github's file size limit. To run the script, the data has to be downloaded from kaggle.com: https://www.kaggle.com/delayedkarma/impressionist-classifier-data
 - Download the zip-file and unzip it.
-- Create a new folder in ´´´.../VisualAnalytics/assignment5_CNN/´´´ called 'data'.
+- Create a new folder in ```.../VisualAnalytics/assignment5_CNN/```called 'data'.
 - Move the folders 'training' and 'validation' both containing several additional folders (named after each painter) to the new data folder. 
 
 ### Execute the script 
@@ -57,5 +57,5 @@ While running, status updates will be printed to the terminal. Afterwards, the c
 
 ## Results
 
-The classification accuracy of the model (f1-score) is 37.07 running with the default parameters. A detailed csv file with the results can be found in 'out'. Increasing the size of the images did not seem to improve the results.
+The classification accuracy of the model (f1-score) is 0.36 running with the default parameters. A detailed csv file with the results can be found in 'out'. Increasing the size of the images did not seem to improve the results.
 
