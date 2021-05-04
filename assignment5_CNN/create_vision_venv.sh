@@ -11,8 +11,6 @@ pip install jupyter
 pip install matplotlib
 pip install opencv-python
 
-python -m ipykernel install --user --name=$VENVNAME
-
 test -f requirements.txt && pip install -r requirements.txt
 
 deactivate
