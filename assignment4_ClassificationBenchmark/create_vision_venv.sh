@@ -10,8 +10,6 @@ pip install ipython
 pip install jupyter
 pip install matplotlib
 
-python -m ipykernel install --user --name=$VENVNAME
-
 test -f requirements.txt && pip install -r requirements.txt
 
 deactivate

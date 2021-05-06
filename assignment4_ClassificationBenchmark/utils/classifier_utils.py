@@ -108,7 +108,27 @@ def plot_cm(y_test, y_pred, normalized:bool):
         cm = pd.crosstab(y_test, y_pred, 
                                rownames=['Actual'], colnames=['Predicted'], normalize='index')
         p = plt.figure(figsize=(10,10));
+        p = sns.heatmap(cm, annot=True, fmt=".2f", cbar=False)     
+
+def save_cm(y_test, y_pred, output_name, normalized:bool):
+    """
+    Save confusion matrix with specified name.
+    """
+    if normalized == False:
+        cm = pd.crosstab(y_test, y_pred, 
+                            rownames=['Actual'], colnames=['Predicted'])
+        p = plt.figure(figsize=(10,10));
+        p = sns.heatmap(cm, annot=True, fmt="d", cbar=False)
+        fig = p.get_figure()
+        fig.savefig(output_name)
+        
+    elif normalized == True:
+        cm = pd.crosstab(y_test, y_pred, 
+                               rownames=['Actual'], colnames=['Predicted'], normalize='index')
+        p = plt.figure(figsize=(10,10));
         p = sns.heatmap(cm, annot=True, fmt=".2f", cbar=False)
+        fig = p.get_figure()
+        fig.savefig(output_name)
         
 def predict_unseen(image, model, classes):
     """
