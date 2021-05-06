@@ -59,13 +59,13 @@ First, navigate to the folder containing the scripts:
 ```bash
 cd src
 ```
-__Logistic regression classifier__
+__Logistic regression classifier__ <br>
 Run the script 'lr-mnist.py'. You can specify the size of the test dataset relative to the full dataset. The script takes any value between 0 and 1. The default is 0.25.
 
 ```bash
 python lr-mnist.py --test_size 0.25
 ```
-__Neural network classifier__
+__Neural network classifier__ <br>
 Run the script 'nn-mnist.py'. As in the previous script, you can specify the size of the test dataset (the default is 0.25). Additionally, you can specify up to three hidden layers (seperated by space e.g. '40 30 20'). The input layer has 64 and the output layer 10. These should not be specified at the commandline. The default is no hidden layers. However, I will recommend two hidden layers, 32 and 16. The number of epochs can also be specified (the default is 1000).
 
 ```bash
