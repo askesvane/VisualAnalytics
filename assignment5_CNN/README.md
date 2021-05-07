@@ -5,9 +5,9 @@ __Multi-class classification of impressionist painters__
 The assignment is to build a classifier which can predict artists from paintings. The data for the assignment can be found here: https://www.kaggle.com/delayedkarma/impressionist-classifier-data
 Using this data, you should build a deep learning model using convolutional neural networks which classify paintings by their respective artists. Why might we want to do this? Well, consider the scenario where we have found a new, never-before-seen painting which is claimed to be the artist Renoir. An accurate predictive model could be useful here for art historians and archivists!
 
-## The model
+## The method
 To solve this multiple classification problem, I have built a deep learning model using convolutional neural networks (CNN). 
-I constructed a model with a ShallowNet architecture (see Model_plot.jpg in the folder 'out'). It takes the height and width specified at the command line as well as 3 (number of colour channels) as the input layer. The images are then fed into a single convolutional layer with a kernel size of 3x3 and a depth of 32. I ‘padded’ the images with an extra set of columns and rows only containing zeros to get around potential conflicts between the size of the image and the kernel. The model feeds the output of the convolutional layer into a ‘ReLU’ activation layer and subsequently flattens the image into a single dimension. Lastly, the flattened image is fed into a fully connected network with the number of painters as the number of potential outcomes using the ‘softmax’ activation function.
+I constructed a model with a ShallowNet architecture (see Model_plot.jpg in the folder 'out'). It takes the height and width specified at the command line as well as 3 (number of colour channels) as the input layer. The images are then fed into a single convolutional layer with a kernel size of 3x3 and a depth of 32. The images are ‘padded’ with an extra set of columns and rows only containing zeros to get around potential conflicts between the size of the image and the kernel. The model feeds the output of the convolutional layer into a ‘ReLU’ activation layer and subsequently flattens the image into a single dimension. Lastly, the flattened image is fed into a fully connected network with the number of painters as the number of potential outcomes using the ‘softmax’ activation function.
 
 ## Results and evaluation
 The weighted accuracy of the ShallowNet model (f1-score) is 35% running with the default parameters (a detailed classification report with the results can be found in 'out'). Increasing the size of the resized images did not seem to improve the results. Although an accuracy of 35% is fairly low, it is important to keep in mind that the model had 10 potential outcomes (in terms of painters) and is thus performing significantly above change.
@@ -21,7 +21,7 @@ This repository has the following directory structure:
 |--------|:-----------|
 ```out``` | Contains the outputs from running the script.
 ```cnn_artists.py```| The script to be executed from the terminal.
-```create_lang_venv.sh``` | A bash script which automatically generates a new virtual environment 'CNN_env', and install all the packages contained within 'requirements.txt'
+```create_visual_venv.sh``` | A bash script which automatically generates a new virtual environment 'CNN_env', and install all the packages contained within 'requirements.txt'
 ```requirements.txt``` | A list of packages along with the versions that are required.
 ```README.md``` | This readme file.
 
@@ -34,7 +34,7 @@ In order to run the script, one is required to set up the virtual environment wi
 ```bash
 git clone https://github.com/askesvane/VisualAnalytics.git
 cd assignment5_CNN
-bash ./create_vision_venv.sh
+bash ./create_visual_venv.sh
 source ./CNN_env/bin/activate
 ```
 

@@ -14,17 +14,17 @@ You should create two Python scripts. One takes the full MNIST data set, trains 
 The first script 'lr_mnist.py' employs a simple multiclass logistic regression model to solve the classification task. The performance of this classification model establishes a baseline comparable to the performance of the neural network model.
 
 ### Results and evaluation
-The accuracy score when running the script with the default data test size (0.25) is 92%. A detailed classification report is printed in the terminal and saved in the folder 'out' as 'lr_ClassifierReport.csv'. Additionally, a confusion matrix 'lr_ConfusionMatrix.png' is saved in the folder. The confusion matrix shows that the model performs extremely well (close to 100% accuracy) when classifying certain numbers (including 1,2, and 6) while performing more purely with other numbers (3, 5, and 8). The matrix indicates that the model tends to confuse these numbers with each other. This is probably due to the nature of these numbers in terms of structural similarities.
+The accuracy score when running the script with the default data test size (0.25) is 92%. A detailed classification report is printed in the terminal and saved in the folder 'out' as 'lr_ClassifierReport.csv'. Additionally, a confusion matrix 'lr_ConfusionMatrix.png' is saved in the folder. The confusion matrix shows that the model performs extremely well (close to 100% accuracy) when classifying certain numbers (e.g. 1,2, and 6) while performing more purely with other numbers (e.g. 3, 5, and 8). The matrix indicates that the model tends to confuse these numbers with each other. This is probably due to the nature of these numbers in terms of structural similarities.
 
 ## Neural network classifier 
 
 ### Methods
-The second script utilizes the predefined class NeuralNetwork() which can be found in the the script ```utils/neuralnetwork.py```. The neural network is given the size of the input layer, output layer as well as potential hidden layers. 
+The second script utilizes the predefined class NeuralNetwork() which can be found in the script ```utils/neuralnetwork.py```. It is a fully connected neural network that takes the size of the input layer, output layer as well as potential hidden layers. 
 
 ### Results and evaluation
 The accuracy of running the script with the default test size (0.25) and two hidden layers (64-32-16-10) was 97% thus outperforming the simple logistic regression model. A classification report and a confusion matrix can be found in 'out' as 'nn_ClassifierReport.csv' and 'nn_ConfusionMatrix.png'. The confusion matrix indicates that, although generally performing with high accuracy, certain numbers tend to be harder to distinguish from each other than others. For instance, in 9% of the cases 5 is predicted as a 9. This is likely due to their structural similarities.
 
-Employing a neural network seems to improve performance over simpler logistic regression classifier tools. The model manages to significantly better learn and predict the different numbers. However, it is crucial to keep in mind that this dataset is not representative for 'real world' classification tasks. All images were black/white, they were of the same size, and the numbers were written approximately at the center of each image etc. These factors undoubtably facilitated the very high accuracy.
+Employing a neural network seems to improve performance over simpler logistic regression classifier tools. The model manages to learn and predict the different numbers significantly better. However, it is crucial to keep in mind that this dataset is not representative for 'real world' classification tasks. All images were black/white, they were of the same size, and the numbers were written approximately at the center of each image etc. These factors undoubtably facilitated the very high accuracy.
 
 ## Repository structure and files
 This repository has the following directory structure:
@@ -34,7 +34,7 @@ This repository has the following directory structure:
 ```out``` | Folder containing the output classification reports as well as confusion matrices from running the two scripts.
 ```src``` | Folder containing the scripts to be executed from the commandline.
 ```utils``` | Folder containing scripts with additional function required to run the classification scripts.
-```create_lang_venv.sh``` | A bash script which automatically generates a new virtual environment 'classification_env', and install all the packages contained within 'requirements.txt'
+```create_visual_venv.sh``` | A bash script which automatically generates a new virtual environment 'classification_env', and install all the packages contained within 'requirements.txt'
 ```requirements.txt``` | A list of packages along with the versions that are required.
 ```README.md``` | This readme file.
 
@@ -47,7 +47,7 @@ In order to run the script, one is required to set up the virtual environment wi
 ```bash
 git clone https://github.com/askesvane/VisualAnalytics.git
 cd assignment4_ClassificationBenchmark
-bash ./create_vision_venv.sh
+bash ./create_visual_venv.sh
 source ./classification_env/bin/activate
 ```
 
@@ -66,7 +66,7 @@ Run the script 'lr-mnist.py'. You can specify the size of the test dataset relat
 python lr-mnist.py --test_size 0.25
 ```
 __Neural network classifier__ <br>
-Run the script 'nn-mnist.py'. As in the previous script, you can specify the size of the test dataset (the default is 0.25). Additionally, you can specify up to three hidden layers (seperated by space e.g. '40 30 20'). The input layer has 64 and the output layer 10. These should not be specified at the commandline. The default is no hidden layers. However, I will recommend two hidden layers, 32 and 16. The number of epochs can also be specified (the default is 1000).
+Run the script 'nn-mnist.py'. As in the previous script, you can specify the size of the test dataset (the default is 0.25). Additionally, you can specify up to three hidden layers (separated by space e.g. '40 30 20'). The input layer has 64 and the output layer 10. These should not be specified at the command line. The default is no hidden layers. However, I will recommend two hidden layers, 32 and 16. The number of epochs can also be specified (the default is 1000).
 
 ```bash
 python nn-mnist.py --test_size 0.25 --layers 32 16 --epochs 1000
