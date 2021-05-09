@@ -54,19 +54,3 @@ python edge_detection.py --width_left 1385 --height_upper 880 --width_right 2890
 The outputs will be saved in 'img'.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
