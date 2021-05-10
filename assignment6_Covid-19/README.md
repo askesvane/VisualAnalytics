@@ -2,10 +2,12 @@
 
 ## Description of the assignment
 
-____Assignment_____
-The assignment is set to build a classifier which can predict whether or not the patient was affected with covid or viral pneumonia based on the x-ray chest scans. The data for the assignment can be found here: https://www.kaggle.com/khoongweihao/covid19-xray-dataset-train-test-sets
+__Assignment__
 
-___Background___
+The assignment is set to build a classifier which can predict whether or not the patient was affected with covid or viral pneumonia based on the x-ray chest scans. The data for the assignment can be found [here](https://www.kaggle.com/khoongweihao/covid19-xray-dataset-train-test-sets).
+
+__Background__
+
 The X-ray scanning technique is one of the methods used to detect the effect of several respiratory diseases, COVID-19 being one of them. While the diagnosis is most often confirmed using polymerase chain reaction (PCR) or antygene tests, infected patients with Covid may present on chest X-ray images with apparent patterns of abnormality detectable with a naked eye.
 These abnormalities comprise things like bilateral multiple lobular and subsegmental areas of consolidation, bilateral ground-glass opacity and subsegmental areas of consolidation in the chest. 
 An accurate and timely classification of Covid (or other respiratory diseases) would enable a swift implementation of all the supportive care required by patients affected by COVID-19 and therefore buliding an accurate predictive model is of a great importance and relevance. 
@@ -13,12 +15,12 @@ An accurate and timely classification of Covid (or other respiratory diseases) w
 With that in mind, the aim of this assignment is to build a model classifier, trained on chest X-ray images of patients diagnosed with COVID-19, Viral pneumonia and control patients without any medical condition. A construction of an accurate predictive model would enable us to predict the presence of the infection and differentiate between the COVID-19 disease and other viral infections, such as e.g., Viral pneumonia. 
 Ultimately, with this assignment we will address the research question:
 
-Q: Can COVID-19 infection be detected as well as differentiated 
-from Viral pneumonia using only X-ray scan images?
+> Can COVID-19 infection be detected as well as differentiated from Viral pneumonia using only X-ray scan images?
 
 
 
 ## The method
+
 To solve this multiple classification problem, we used a pretrained convolutional neural network model: VGG16, known for its significantly better performance compared to the previous generations of classification models. In this assignment, the default complex model architecture was enriched with additional dropout layers in order to prevent potential overfitting of the model. 
 
 Upon importing and reshaping the image data into a numpy array object we proceeded with constructing the model. First of all, we have explicitly disabled training of the convolutional layers to use the already existing weights of the model and prevent the model overfitting to the data. Then we added new classification layers: a flattening layer, a dense layer with the 'relu' activation function, and lastly the output classification layer with the 'softmax' activation function with 3 possible diagnostic outcomes: Viral Pneumonia, Covid and Normal. The model was then compiled using 'Adam' as an optimizer and 'categorical crossentropy' as the loss function parameter. Lastly, we trained the model on the data with the number of epochs set to 10 and a batch size of 128.
@@ -55,9 +57,9 @@ source ./Covid_env/bin/activate
 ```
 
 ### Execute the script 
-Now, the script can be executed. You can specify the height and width of the resized images. In both cases the default is 32. Additionally, you can specify the number of epochs with a default of 10 and the text_size with a default of 0.25. 
+Now, the script can be executed. You can specify the height (-a) and width (-b) of the resized images. In both cases the default is 32. Additionally, you can specify the number of epochs (-e) with a default of 10 and the text_size (-s) with a default of 0.25. 
 
 ```bash
-python covid19.py --resize_height 32 --resize_width 32 --epochs 10 --text_size 0.25 
+python covid19.py -a 32 --width 32 - 10 -s 0.25 
 ```
-While running, status updates will be printed to the terminal. Afterwards, the classification report and plots can be found in the folder called 'out'. It takes approximately x minutes.
+While running, status updates will be printed to the terminal. Afterwards, the classification report and plots can be found in the folder called 'out'. It takes approximately 3 minutes.
