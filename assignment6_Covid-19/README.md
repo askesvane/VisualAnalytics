@@ -38,10 +38,10 @@ This repository has the following directory structure:
 |--------|:-----------|
 ```out``` | Contains the outputs from running the script.
 ```covid19.py```| The script to be executed from the terminal.
-```create_visual_venv.sh``` | A bash script which automatically generates a new virtual environment 'CNN2', and install all the packages contained within 'requirements.txt'
+```create_visual_venv.sh``` | A bash script which automatically generates a new virtual environment 'Covid_env', and install all the packages contained within 'requirements.txt'
 ```requirements.txt``` | A list of packages along with the versions that are required.
 ```README.md``` | This readme file.
-```data```| A folder with .jpg images of chest X-rays scans.
+```data```| A folder with images of chest X-rays scans.
 
 
 ## Usage (reproducing the results)
