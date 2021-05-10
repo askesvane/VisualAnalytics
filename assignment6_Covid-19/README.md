@@ -60,6 +60,6 @@ source ./Covid_env/bin/activate
 Now, the script can be executed. You can specify the height (-a) and width (-b) of the resized images. In both cases the default is 32. Additionally, you can specify the number of epochs (-e) with a default of 10 and the text_size (-s) with a default of 0.25. 
 
 ```bash
-python covid19.py -a 32 --width 32 - 10 -s 0.25 
+python covid19.py -a 32 -b 32 -e 10 -s 0.25 
 ```
 While running, status updates will be printed to the terminal. Afterwards, the classification report and plots can be found in the folder called 'out'. It takes approximately 3 minutes.
