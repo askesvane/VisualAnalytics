@@ -21,7 +21,7 @@ To solve this task, I have created 3 function: one function draws a green rectan
 To draw draw the green contours, I have used openCV to change the image into greyscale and subsequently blurred the image (gaussian) with a 5x5 kernel. I found the letters with canny edge detection defining the lower and upper boundaries as 75 and 140. I used openCV's findContours() and drawContours() to apply green contours around the letters.
 
 ## Results and evaluation
-The output images can be found in the folder 'img'. I successfully managed to draw a rectangle as well as crop the image. I managed to capture every letter in the image and draw green contours around them. However, I did not manage to exclude everything but the letters because some darker fissures were within the threshold to be detected. By increasing the threshold to overcome this problem, I would augment the risk of not detecting less pronounced letters.
+The output images can be found in the folder 'img'. I successfully managed to draw a rectangle as well as crop the image. I managed to capture every letter in the image and draw green contours around them. The three images are saved in the folder 'img' as 'image_with_ROI.jpg', 'image_cropped.jpg', and 'image_letters.jpg'. However, I did not manage to exclude everything but the letters because some darker fissures were within the threshold to be detected. By increasing the threshold to overcome this problem, I would augment the risk of not detecting less pronounced letters.
 
 ## Repository structure and files
 This repository has the following directory structure:

@@ -6,6 +6,11 @@ __Assignment__
 
 The assignment is set to build a classifier which can predict whether or not the patient was affected with covid or viral pneumonia based on the x-ray chest scans. The data for the assignment can be found [here](https://www.kaggle.com/khoongweihao/covid19-xray-dataset-train-test-sets).
 
+__Contribution__
+This assignment was written as a group project between Hanna Janina Matera (au603273) and Aske Svane Qvist (au613522), where: 
+
+> “Both students contributed equally to every stage of this project from initial conception and implementation, through the production of the final output and structuring of the repository. (50/50%)”
+
 __Background__
 
 The X-ray scanning technique is one of the methods used to detect the effect of several respiratory diseases, COVID-19 being one of them. While the diagnosis is most often confirmed using polymerase chain reaction (PCR) or antygene tests, infected patients with Covid may present on chest X-ray images with apparent patterns of abnormality detectable with a naked eye.
@@ -57,7 +62,7 @@ source ./Covid_env/bin/activate
 ```
 
 ### Execute the script 
-Now, the script can be executed. You can specify the height (-a) and width (-b) of the resized images. In both cases the default is 32. Additionally, you can specify the number of epochs (-e) with a default of 10 and the text_size (-s) with a default of 0.25. 
+Now, the script can be executed. You can specify the height (-a) and width (-b) of the resized images. In both cases the default is 32. Additionally, you can specify the number of epochs (-e) with a default of 10 and the test text_size (-s) with a default of 0.25. 
 
 ```bash
 python covid19.py -a 32 -b 32 -e 10 -s 0.25 

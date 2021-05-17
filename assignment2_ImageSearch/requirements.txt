@@ -1,4 +1,0 @@
-os
-pandas
-cv2
-glob
