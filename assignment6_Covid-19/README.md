@@ -1,4 +1,5 @@
-# Assignment 6  
+# Assignment 6  - Corona Classification from X-rays
+__Self-assigned project__
 
 ## Description of the assignment
 
@@ -7,6 +8,7 @@ __Assignment__
 The assignment is set to build a classifier which can predict whether or not the patient was affected with covid or viral pneumonia based on the x-ray chest scans. The data for the assignment can be found [here](https://www.kaggle.com/khoongweihao/covid19-xray-dataset-train-test-sets).
 
 __Contribution__
+
 This assignment was written as a group project between Hanna Janina Matera (au603273) and Aske Svane Qvist (au613522), where: 
 
 > “Both students contributed equally to every stage of this project from initial conception and implementation, through the production of the final output and structuring of the repository. (50/50%)”
