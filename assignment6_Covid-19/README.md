@@ -58,7 +58,7 @@ In order to run the script, one is required to set up the virtual environment wi
 
 ```bash
 git clone https://github.com/askesvane/VisualAnalytics.git
-cd assignment6_Covid19
+cd assignment6_Covid-19
 bash ./create_visual_venv.sh
 source ./Covid_env/bin/activate
 ```
